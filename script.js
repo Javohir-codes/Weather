@@ -1,7 +1,8 @@
 const apiKey = "6806b8256e13875a96ddb6422a4b7e20";
 const city = "Tashkent"
+const nowtime = document.getElementById("now-time")
 
-async function getWeather(params) {
+async function getWeather() {
     const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`;
 
     try {
@@ -18,9 +19,12 @@ async function getWeather(params) {
         console.log(dailyForcast)
 
         // Todays hourly
-
-        const today = new Date().toISOString().split("T")[0]; 
+        const now = new Date();
+        const today = now.toISOString().split("T")[0]; 
+        const time = now.toLocaleTimeString();
+        console.log(time)
         const todayForecast = data.list.filter(item => item.dt_txt.startsWith(today));
+        nowtime.innerText = time
 
         console.log("Today's Hourly Forecast:", todayForecast);
 
@@ -40,3 +44,8 @@ themeToggle.addEventListener('click', () => {
     ? 'Light Mode'
     : 'Dark Mode';
 });
+
+
+
+getWeather();
+
