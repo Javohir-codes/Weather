@@ -222,7 +222,7 @@ h2 {
     flex-direction: column;
     align-items: center;
     background-image: linear-gradient(to bottom right, #F88508, #F6FAD9);
-    width: 130px;
+    width: 33%;
     height: 300px;
     border-radius: 40px;
 }
@@ -259,4 +259,34 @@ h2 {
 }
 .feels-like-div {
     display: flex;
+}
+.water {
+    font-size: 100px;
+}
+body.dark-mode section {
+    background-image: linear-gradient(to right, #9E9E9E , black);
+}
+body.dark-mode {
+    background-image: linear-gradient(to right, #9E9E9E , black);
+}
+body.dark-mode .div-time,
+body.dark-mode .div-info,
+body.dark-mode .weather-div-days,
+body.dark-mode .forecast-hours {
+    color: white;
+    background-color: #444444;
+}
+body.dark-mode h3,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode p,
+body.dark-mode h4 {
+    color: white;
+}
+body.dark-mode .forecast-hours-div {
+    background: #373636;
+}
+body.dark-mode .city-input {
+    background: #444444;
+    color: gray;
 }

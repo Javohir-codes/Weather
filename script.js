@@ -23,6 +23,7 @@ const forecast5data2 = document.getElementById("forecast5data2")
 const forecast5data3 = document.getElementById("forecast5data3")
 const forecast5data4 = document.getElementById("forecast5data4")
 const forecast5data5 = document.getElementById("forecast5data5")
+const sealevel = document.getElementById("sealevel")
 
 async function getWeather() {
     const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`;
@@ -69,6 +70,7 @@ async function getWeather() {
         forecast5data3.innerText = `${dailyForcast[2].dt_txt}`
         forecast5data4.innerText = `${dailyForcast[3].dt_txt}`
         forecast5data5.innerText = `${dailyForcast[4].dt_txt}`
+        sealevel.innerText = `${todayForecast[0].main.sea_level}`
 
         console.log("Today's Hourly Forecast:", todayForecast);
 
@@ -80,16 +82,13 @@ async function getWeather() {
 
         // Dark Mode
 
-const themeToggle = document.getElementById('theme-toggle');
+const themeToggle = document.getElementById('themetoggle');
 
-themeToggle.addEventListener('click', () => {
+themetoggle.addEventListener('click', () => {
   document.body.classList.toggle('dark-mode');
-  themeToggle.textContent = document.body.classList.contains('dark-mode')
+  themetoggle.textContent = document.body.classList.contains('dark-mode')
     ? 'Light Mode'
     : 'Dark Mode';
 });
 
-
-
 getWeather();
-

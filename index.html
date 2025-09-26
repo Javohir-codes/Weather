@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body>
+<body class="body" id="body">
     <nav>
-        <button id="theme-toggle" class="dark-mode-button">Dark Mode</button>
+        <button id="themetoggle" class="dark-mode-button">Dark Mode</button>
         <img src="./imgs/1046ed0805cd02df74220cfda91b4da36b9b9601.png" alt="" class="input-img">
-        <input type="text" name="city" placeholder="Search for your preffered city..." required id="city-input" class="city-input">
+        <input type="text" name="city" placeholder="Search for your preffered city..." required id="cityinput" class="city-input">
         <button class="nav-button"><img src="./imgs/aa5f570c1e046d0137294425341c52e6ac4c5293.png" alt="" class="nav-button-img"> Current Location</button>
     </nav>
     <section>
@@ -48,6 +49,11 @@
                         <h3 class="full-info-div-h3" id="Pressure">000hPa</h3>
                         <h3 class="full-info-div-name">Pressure</h3>
                     </div>
+                    <div class="full-info-div-div">
+                        <i class="fa-solid fa-water fa-2xl water" style="color: #292929;"></i>
+                        <h3 class="full-info-div-h3" id="sealevel"></h3>
+                        <h3 class="full-info-div-name">Sea Level</h3>
+                    </div>
                 </div>
             </div>
         </div>
@@ -81,7 +87,7 @@
                     <div class="forecast-hours-div">
                         <h3 class="forecast-hours-div-h3">15:00</h3>
                         <h3 class="forecast-hours-div-degree" id="degree15">00°C</h3>
-                        <img src="./imgs/navigation 1.png" alt="" class="forecast-hours-div-arrow">
+                        <img src="./imgs/navigation 1.png" alt="" class="forecast-hours-div-arrow left">
                         <h3 class="forecast-hours-div-speed" id="speed15">0km/h</h3>
                     </div>
                     <div class="forecast-hours-div">
