@@ -257,3 +257,6 @@ h2 {
 .left {
     transform: rotate(-45deg);
 }
+.feels-like-div {
+    display: flex;
+}
